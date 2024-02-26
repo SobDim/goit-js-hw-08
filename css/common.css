@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900);
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  padding: 8px;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: rgb(78, 117, 255);
+  color: rgb(255, 255, 255);
+
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.04rem;
+
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease;
+
+}
+
+button:hover {
+  background-color: rgb(108, 140, 255);
+}
+
+
+.login-form button {
+  margin-top: 16px;
+  width: 86px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+
+.login-form input {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+
+
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 4px;
+}
+
+/* a {
+  font-size: 16px;
+  font-weight: 400;
+} */
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+body {
+  margin: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #fafafa;
+  color: #2E2F42;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+
+ul#categories {
+  max-width: 440px;
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+
+
+
+h1,
+h2 {
+  font-size: 24px;
+  letter-spacing: 0.04rem;
+}
+
+ul#categories ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: #f6f6fe;
+}
+
+.item li {
+  line-height: 1.5;
+  letter-spacing: 0.04rem;
+  border: 1px solid #808080;
+  width: 360px;
+  padding: 8px 16px 8px 16px;
+}
+
+
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 24px;
+  row-gap: 48px;
+
+}
+
+
+
+
+.cards {
+  list-style: none;
+  border: 1px solid rgb(128, 128, 128);
+
+  background-color: rgb(128, 128, 128);
+
+  border-radius: 8px;
+  width: 360px;
+  padding: 2px;
+  box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .22), 0 5px 14px 0 rgba(0, 0, 0, .18);
+}
+
+.item img {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#name-input {
+
+  padding: 8px 16px;
+  min-width: 360px;
+  margin: 16px auto;
+}
+
+
+.widget {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.widget p {
+  margin-bottom: 16px;
+}
+
+
+#controls {
+  display: flex;
+  gap: 16px;
+  padding: 32px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+
+  background: rgb(246, 246, 254);
+}
+
+#controls input {
+  text-align: center;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 8px;
+  width: 150px;
+}
+
+
+
+#controls button {
+  width: 150px;
+}
+
+
+
+#controls button:last-child {
+  background: rgb(255, 78, 78);
+  transition: background-color 0.3s ease;
+}
+
+#controls button:last-child:hover {
+  background-color: rgb(255, 112, 112);
+}
+
+
+#boxes {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  border-radius: 8px;
+  background: rgb(246, 246, 254);
+
+}
+
+
+
+/* button {
+  background: rgb(78, 117, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 4%;
+  padding: 8px 16px;
+
+} */
