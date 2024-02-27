@@ -65,11 +65,12 @@ const images = [
 ];
 
 const gallery = document.querySelector('.js-gallery');
+const body = document.body;
 
 function imgTemplate(obj) {
   return `
           <li class="gallery-item">
-            <a class="gallery-link" href="large-image.jpg">
+            <a class="gallery-link" href="${obj.original}">
               <img
                 class="gallery-image"
                 src="${obj.preview}"
@@ -88,17 +89,37 @@ const markup = imgsTemplate(images);
 
 gallery.innerHTML = markup;
 
-gallery.addEventListener('click', e => {
+gallery.addEventListener('click', openPicture);
+
+function openPicture(e) {
   e.preventDefault();
   if (e.currentTarget === e.target) return;
-  const linkSelectedImg = e.target.dataset.source;
-  const instance = basicLightbox.create(`
-      <img src=" ${linkSelectedImg}" width="1112" height="640">
-  `);
-  instance.show();
-  gallery.addEventListener('keydown', e => {
-    if (e.code === 'Escape') {
-      instance.close();
+  const largeImageURL = e.target.href || e.target.dataset.source;
+
+  /*
+   */
+  //modalka ;
+  const instance = basicLightbox.create(
+    `
+      <img src="${largeImageURL}" width="1112" height="640">
+  `,
+
+    {
+      onShow: () => {
+        gallery.addEventListener('keydown', onEscClose);
+        body.style.overflow = 'hidden';
+      },
+      onClose: () => {
+        gallery.removeEventListener('keydown', onEscClose);
+        body.style.overflow = 'visible';
+      },
     }
-  });
-});
+  );
+
+  instance.show();
+
+  function onEscClose(e) {
+    if (e.code !== 'Escape') return;
+    instance.close();
+  }
+}
